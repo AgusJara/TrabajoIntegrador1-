@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&" rel="stylesheet">
+    <title>TuTiendaFavorita</title>
 </head>
 <body>
+    <header>
+        <div class="hicono">
+            <a class="icono" href="./home.html"><i class="fa-solid fa-house"></i></a>
+        </div>
+    </header>    
+<main>
+    <div class="container_formulario">
+        <div class="formulario">
+            <form action="#" method="get">
+                <h2>Register</h2>            
+                <label for="email">Ingresa tu email
+                <input class="campos" type="email" id="email"  name="email" placeholder="example@gmail.com" required>
+                </label>
+                <label for="password">Crea una contraseña
+                <input class="campos" type="password" id="password"  name="password" placeholder="123456" required>
+                </label>
+                <label for="password">Repite tu contraseña
+                <input class="campos" type="password" id="password"  name="repetircontraseña" placeholder="123456" required>
+                </label>
+                <label for="checkbox">Terminos y condiciones
+                <input type="checkbox" id="checkbox"  value="Terminos" required>
+                </label>
+                <button type="submit" value="Registrar">Registrarme</button>
+                <a href="./login.html">Ya tengo cuenta</a>
+            </form>    
+        </div>        
+    </div>
+</main>    
     
+    <footer>
+        <div class="container_footer">
+          <nav>
+              <ul class="ulfooter">
+                  <li>Ayuda</li>
+                  <li>Términos y usos</li>
+                  <li>Contactanos</li>
+                  <li>Acerca de nosotros</li>
+              </ul>
+          </nav>
+          <div class="icons">
+              <i class="fa-brands fa-square-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-twitter"></i>
+          </div>    
+              <p>Agustin Jaralambides y Marco Mambretti</p>
+        </div>        
+      </footer>
 </body>
 </html>
