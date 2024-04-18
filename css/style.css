@@ -248,3 +248,69 @@ form{
     flex-direction: column;
     align-items: center;
 } 
+
+
+@media (max-width: 480px){
+
+    body{
+        width: 100%;
+        margin: 0;
+    }
+
+    main{
+        padding: 10px;
+    }
+
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+    }
+    
+    .accesorios{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .electronica{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .ropa{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .section_categorias{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+    .subcontainer{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .subcontainer div{
+        width: 50%;
+        padding: 10px;
+    }
+
+    
+    .subcontainer div p{
+        width: 100%;
+    }    
+    
+    footer nav{
+        width: 100%;
+    }
+
+}
+    
