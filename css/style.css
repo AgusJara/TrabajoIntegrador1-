@@ -15,7 +15,7 @@ body{
 
 /* HEADER */
 
-header{
+.headerhome{
     background-color: rgba(255, 240 ,240, .3);
     border-radius: 10px;
 }
@@ -30,11 +30,10 @@ a{
     color: rgb(81, 78, 80);
 }
 
-
-.icono{
-    height: 25px;
-    width: 50px;
+header div{
+    height: fit-content;
 }
+ 
 
 .container_header{
     display: flex;
@@ -131,7 +130,8 @@ img{
 }
 
 .subcontainer div a{
-    display: block;
+     display: block;
+     max-width: fit-content;
 }
 
 
@@ -182,6 +182,7 @@ footer nav{
 }
 
 /* REGISTER */
+
 
 form{
     width: 100%;
@@ -252,14 +253,17 @@ form{
 
 @media (max-width: 480px){
 
+    /* HOME.HTML */
+
     body{
-        width: 100%;
+        width: 100vw;
         margin: 0;
     }
 
     main{
         padding: 10px;
     }
+
 
     .container{
         width: 100%;
@@ -312,5 +316,11 @@ form{
         width: 100%;
     }
 
+    /* REGISTER */
+
+    .container_formulario{
+        width: 90%;
+    }
 }
+
     
