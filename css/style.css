@@ -250,6 +250,41 @@ form{
     align-items: center;
 } 
 
+    /* PRODUCTO.HTML*/
+
+    .container_producto{
+       width: 60%;
+        margin: auto;
+       margin-top: 100px;
+       margin-bottom: 100px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       background-color: rgba(130, 130, 130, 0.4);
+       border-radius: 15px;
+       padding: 20px;
+    }
+
+    .subcontainer_producto{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       width: 50%;
+       margin-top: 50px;
+       margin-left: 3px;
+       margin-bottom: 20px;
+    }
+
+    .detalle1{
+        background-color: rgba(250, 250, 250, 0.4);
+        padding: 20px;
+        border-radius: 10px;
+        width: 30%;
+    }
+
+    h1{
+        margin-bottom: 5px;
+    }
 
 @media (max-width: 480px){
 
