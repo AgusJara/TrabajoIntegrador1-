@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&" rel="stylesheet">
+    <title>TuTiendaFavorita</title>
 </head>
 <body>
-    
+    <header>
+        <div>
+            <a class="icono" href="./home.html"><i class="fa-solid fa-house"></i></a>
+        </div>
+    </header>  
+
+    <main>
+        <div class="container_formulario">
+            <div class="formulario">
+                <form action="#" method="get">
+                    <h2>Recupera tu contraseña</h2>            
+                    <label for="email">Ingresa tu email
+                    <input class="campos" type="email" id="email"  name="email" placeholder="example@gmail.com" required>
+                    </label>
+                    <label for="checkbox">Quiero recuperar mi contraseña
+                    <input type="checkbox" id="checkbox"  value="recuperar" required>
+                    </label>
+                    <button type="submit" value="Recuperar">Recuperar</button>
+                </form>    
+            </div>        
+        </div>
+    </main>  
 </body>
 </html>
