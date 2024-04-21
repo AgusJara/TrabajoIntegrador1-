@@ -381,6 +381,16 @@ form{
     .container_formulario{
         width: 90%;
     }
+
+    /* PRODUCTO */
+
+    .container_producto{
+        width: 100%;
+    }
+
+    .subcontainer_producto{
+        width: 100%;
+    }
 }
 
     
