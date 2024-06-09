@@ -117,6 +117,29 @@ img{
     padding-left: 10px;
 }
 
+/* CAMBIOS */
+
+
+.subcontainer2{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.subcontainer3{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.subcontainer4{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+
+
 .section_categorias img{
     width: 200px;
 }
@@ -137,7 +160,51 @@ img{
      max-width: fit-content;
 }
 
+.subcontainer h4{
+    width: 200px;
+}
 
+/* CAMBIOS */
+
+.subcontainer div p{
+    margin-bottom: 5px;
+    width: 230px;
+}
+
+.subcontainer div a{
+     display: block;
+     max-width: fit-content;
+}
+
+.subcontainer2 div p{
+    margin-bottom: 5px;
+    width: 230px;
+}
+
+.subcontainer2 div a{
+     display: block;
+     max-width: fit-content;
+}
+
+.subcontainer3 div p{
+    margin-bottom: 5px;
+    width: 230px;
+}
+
+.subcontainer3 div a{
+     display: block;
+     max-width: fit-content;
+}
+
+.subcontainer4 div p{
+    margin-bottom: 5px;
+    width: 230px;
+}
+
+.subcontainer4 div a{
+     display: block;
+     max-width: fit-content;
+}
 
 /* FOOTER */
 
@@ -379,6 +446,60 @@ form{
         width: 100%;
     }    
     
+    /* CAMBIOS */
+
+    .subcontainer2{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .subcontainer2 div{
+        width: 50%;
+        padding: 10px;
+    }
+
+    
+    .subcontainer2 div p{
+        width: 100%;
+    }    
+    
+    .subcontainer3{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .subcontainer3 div{
+        width: 50%;
+        padding: 10px;
+    }
+
+    
+    .subcontainer3 div p{
+        width: 100%;
+    }    
+    
+    .subcontainer4{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .subcontainer4 div{
+        width: 50%;
+        padding: 10px;
+    }
+
+    
+    .subcontainer4 div p{
+        width: 100%;
+    }    
+    
+
     footer nav{
         width: 100%;
     }
