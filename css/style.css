@@ -134,6 +134,7 @@ img{
 
 .subcontainer4{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 10px;
 }
@@ -150,6 +151,11 @@ img{
     padding-left: 10px;
 }
 
+.subcontainer div{
+    width: 230px;
+    margin-right: 5px;
+}
+
 .subcontainer div p{
     margin-bottom: 5px;
     width: 230px;
@@ -163,6 +169,8 @@ img{
 .subcontainer h4{
     width: 200px;
 }
+
+
 
 /* CAMBIOS */
 
@@ -196,15 +204,26 @@ img{
      max-width: fit-content;
 }
 
+.subcontainer3 h4{
+    width: 200px;
+}
+
 .subcontainer4 div p{
     margin-bottom: 5px;
-    width: 230px;
+    width: 240px;
+    word-wrap: break-word;
+    height: auto;
 }
 
 .subcontainer4 div a{
      display: block;
      max-width: fit-content;
 }
+
+.subcontainer4 h4{
+    width: 200px;
+}
+
 
 /* FOOTER */
 
