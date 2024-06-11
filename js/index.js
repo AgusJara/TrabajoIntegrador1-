@@ -4,7 +4,7 @@ fetch ('https://fakestoreapi.com/products')
     })
     .then(function (data) {
         // console.log(data);
-        
+
 //<---------------------Seccion Accesorios-------------------->//
 
 let arrayDeProductos = data;
@@ -18,7 +18,7 @@ let accesorios = [];
                         <h4>${arrayDeProductos[i].title}</h4>
                         <p>${arrayDeProductos[i].description}</p>
                         <p>Precio: $${arrayDeProductos[i].price}</p>
-                        <a href="./producto.html">Ver más</a>
+                        <a href="./producto.html?id=${arrayDeProductos[i].id}">Ver más</a>
                         </div>`
     }     
 
@@ -40,7 +40,7 @@ let divSeccionRopaH = document.querySelector('.subcontainer3');
                         <h4>${arrayDeProductos[i].title}</h4>
                         <p>${arrayDeProductos[i].description}</p>
                         <p>Precio: $${arrayDeProductos[i].price}</p>
-                        <a href="./producto.html">Ver más</a>
+                        <a href="./producto.html?id=${arrayDeProductos[i].id}">Ver más</a>
                         </div>`
     }     
 
@@ -58,11 +58,17 @@ for (let i = 14; i < 20; i++) {
                 <h4>${arrayDeProductos[i].title}</h4>
                 <p>${arrayDeProductos[i].description}</p>
                 <p>Precio: $${arrayDeProductos[i].price}</p>
-                <a href="./producto.html">Ver más</a>
+                <a href="./producto.html?id=${arrayDeProductos[i].id}">Ver más</a>
                 </div>`
     }
 
         divSeccionRopaM.innerHTML = ropaM;
+
+let ulHeader = document.querySelector('.ulheader');
+    ulHeader.innerHTML = `<li><a href="./category.html?categories=${arrayDeProductos.category="jewelery"}">Accesorios</a></li>
+                          <li><a href="./category.html?categories=${arrayDeProductos.category="electronics"}">Electronica</a></li>
+                          <li><a href="./category.html?categories=${arrayDeProductos.category="men's clothing"}">Ropa hombre</a></li>
+                          <li><a href="./category.html?categories=${arrayDeProductos.category="women's clothing"}">Ropa mujer</a></li>`
 
 
     })
