@@ -43,5 +43,26 @@ fetch('https://fakestoreapi.com/products')
                           <li><a href="./category.html?categories=${arrayCategoriasProductos.category="women's clothing"}">Ropa mujer</a></li>`
 })
 
-//==================CATEGORIAS-------------------//
+//==================AGREGAR AL CARRRITO-------------------//
+
+let agregarCarrito = document.querySelector ('.detalle2 h2 a');
+
+agregarCarrito.addEventListener ('click', function(e){
+    e.preventDefault();
+    let productosCarrito = localStorage.getItem("miCarrito");
+    console.log(productosCarrito);
+    if(productosCarrito!=null){
+        if (!productosCarrito.includes(id)) {
+            let recuperoStorage = localStorage.getItem("miCarrito");
+            let storageToParse = JSON.parse(recuperoStorage);
+            storageToParse.push(id);
+            localStorage.setItem("miCarrito", JSON.stringify(storageToParse));
+
+        }
+    } else{
+        miCarrito = [];
+        miCarrito.push (id);
+        localStorage.setItem("miCarrito", JSON.stringify(miCarrito));
+    }
+})
 

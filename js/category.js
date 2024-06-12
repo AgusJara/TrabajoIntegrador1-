@@ -13,6 +13,7 @@ fetch(`https://fakestoreapi.com/products/category/${category}`)
     let arrayCategorias = data;
     let categoriaProductos = document.querySelector('.subcontainerCategory')
     let productosCategoria = [];
+    let tituloCategoria = document.querySelector ('.titulosection h3');
 
     for (let i = 0; i < arrayCategorias.length; i++) {
         productosCategoria += `<div>
@@ -22,9 +23,11 @@ fetch(`https://fakestoreapi.com/products/category/${category}`)
                                <p>Precio: $${arrayCategorias[i].price}</p>
                                <a href="./producto.html?id=${arrayCategorias[i].id}">Ver más</a>
                                </div>`
-    }
+                               tituloCategoria.innerText = arrayCategorias[i].category;
+        }
 
     categoriaProductos.innerHTML = productosCategoria;
+    
 
     let ulHeaderCat = document.querySelector('.ulheader');
     ulHeaderCat.innerHTML = `<li><a href="./category.html?categories=${arrayCategorias.category="jewelery"}">Accesorios</a></li>
