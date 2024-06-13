@@ -17,20 +17,24 @@
 <main>
     <div class="container_formulario">
         <div class="formulario">
-            <form action="./index.html" method="get">
+            <form action="./login.html" method="get">
                 <h2>Register</h2>            
                 <label for="email">Ingresa tu email
-                <input class="campos" type="email" id="email"  name="email" placeholder="example@gmail.com" required>
+                <input class="campos" type="email" id="email"  name="email" placeholder="example@gmail.com">
                 </label>
-                <label for="password">Crea una contraseña
-                <input class="campos" type="password" id="password"  name="password" placeholder="123456" required>
+                <p class="emailErr"></p>
+                <label  for="password">Crea una contraseña
+                <input class="campos" type="password" id="password"  name="password" placeholder="123456">
                 </label>
+                <p class="passErr"></p>
                 <label for="password">Repite tu contraseña
-                <input class="campos" type="password" id="password"  name="repetircontraseña" placeholder="123456" required>
+                <input class="campos" type="password" id="passConfirm"  name="repetircontraseña" placeholder="123456">
                 </label>
+                <p class="passConfErr"></p>
                 <label for="checkbox">Terminos y condiciones
-                <input type="checkbox" id="checkbox"  value="Terminos" required>
+                <input type="checkbox" id="checkbox"  value="Terminos">
                 </label>
+                <p class="errCheck"></p>
                 <button type="submit" value="Registrar">Registrarme</button>
                 <a href="./login.html">Ya tengo cuenta</a>
             </form>    
@@ -56,5 +60,6 @@
               <p>Agustín Jaralambides y Marco Mambretti</p>
         </div>        
       </footer>
+      <script src="./js/register.js"></script>
 </body>
 </html>

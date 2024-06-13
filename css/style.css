@@ -336,9 +336,40 @@ form{
 form{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 } 
 
+form a{
+    align-self: center;
+}
+
+form h2{
+    align-self: center;
+}
+
+.emailErr{
+    color: red;
+    font-size: 10px;
+    padding-left: 10px;
+}
+
+.passErr{
+    color: red;
+    font-size: 10px;
+    padding-left: 10px;
+}
+
+.passConfErr{
+    color: red;
+    font-size: 10px;
+    padding-left: 10px;
+}
+
+.errCheck{
+    color: red;
+    font-size: 10px;
+    padding-left: 10px;
+}
     /* PRODUCTO */
 
     .container_producto{
