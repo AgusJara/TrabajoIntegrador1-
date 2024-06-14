@@ -26,7 +26,21 @@ let accesorios = [];
 
 //<---------------------Seccion Tecnologia-------------------->//
 
-        
+let divSeccionTec = document.querySelector('.subcontainer2')
+    let tecnologia = [];
+    console.log(arrayDeProductos);
+
+    for (let i = 8; i < 14; i++) {
+            tecnologia += `<div>
+                        <img src="${arrayDeProductos[i].image}" alt="${arrayDeProductos[i].title}">
+                        <h4>${arrayDeProductos[i].title}</h4>
+                        <p>${arrayDeProductos[i].description}</p>
+                        <p>Precio: $${arrayDeProductos[i].price}</p>
+                        <a href="./producto.html?id=${arrayDeProductos[i].id}">Ver más</a>
+                        </div>`    
+    }
+
+        divSeccionTec.innerHTML = tecnologia
 
 //<---------------------Seccion Ropa Hombre-------------------->//
 
