@@ -1,3 +1,4 @@
+
 let form = document.querySelector ('form');
 let email = document.querySelector('#email');
 let pass = document.querySelector('#password');
@@ -10,67 +11,58 @@ let errCheck = document.querySelector ('.errCheck');
 let usuario= {};
 let usuarios=[];
 
+
 form.addEventListener ('submit', function(e){
     e.preventDefault();
-    if (email.value == '') {
-        emailErr.innerText = 'Por favor complete el campo';
-    }if (pass.value == ''){
-        passErr.innerText = 'Por favor complete el campo';
-    }else if (pass.value.length <= 6){    
-        passErr.innerText = 'Debe ingresar al menos 6 caracteres';
-    } else if (passConfirm.value !== pass.value){
-        passConfErr.innerText ='Las contraseñas no coinciden';
-    } else if (!idCheck.checked){
-        errCheck.innerText = 'Tienes que aceptar los terminos y condiciones';
-    } else{
+    if (email.value !== '' && pass.value !== '' && pass.value.length > 7 && passConfirm.value == pass.value && idCheck.checked) {
         usuario.email = email.value;
         usuario.pass = pass.value;
         usuarios.push (usuario);
-        this.submit();
         // console.log(usuarios);
         localStorage.setItem ("usuario", JSON.stringify(usuarios));
+        this.submit();
+    }
+})
 
+
+document.addEventListener ('DOMContentLoaded', function () {
+let pass = document.querySelector('#password');
+let passErr = document.querySelector ('.passErr');
+
+pass.addEventListener ('input', function() {
+    if (pass.value == ''){
+        passErr.innerText ='Por favor complete el campo';
+    } else if (pass.value.length <= 6){
+        passErr.innerText ='Debe ingresar al menos 6 caracteres';
+    } else {
+        passErr.innerText = '';
     }
 })
 
 email.addEventListener('input', function(){
-    if (email.value !=='') {
-       emailErr.style.display = 'none'
+    if (email.value =='') {
+       emailErr.innerText = 'Por favor complete el campo';
     } else{
-        emailErr.style.display = 'block';
+        emailErr.innerText = '';
     }
-})
-
-pass.addEventListener ('input', function() {
-    if (pass.value !== '' && pass.value.length > 6){
-        passErr.style.display = 'none';
-    } else{
-        passErr.style.display = 'block';
-    }
-    
-    // if (pass.value !== '') {
-    //     passErr.style.display = 'none';
-    // }if (pass.value.length <= 6){
-    //     passErr.style.display = 'block';
-    // } else if (pass.value.length > 6){
-    //     passErr.style.display = 'none'
-    // } else{
-    //     passErr.style.display = 'block';
-    // }
 })
 
 passConfirm.addEventListener ('input', function() {
     if (passConfirm.value == pass.value) {
-        passConfErr.style.display = 'none';
+        passConfErr.innerText = '';
     } else{
-        passConfErr.style.display = 'block';
+        passConfErr.innerText = 'Las contraseñas no coinciden';
     }
 })
 
 idCheck.addEventListener ('input', function() {
     if (idCheck.checked) {
-        errCheck.style.display = 'none';
+        errCheck.innerText = '';
     } else{
-        errCheck.style.display = 'block';
+        errCheck.innerText = 'Tienes que aceptar los términos y condiciones para poder continuar';
     }
 })
+
+})
+
+

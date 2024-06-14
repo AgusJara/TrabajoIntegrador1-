@@ -17,15 +17,19 @@
     <main>
         <div class="container_formulario">
             <div class="formulario">
-                <form action="#" method="get">
+                <form action="#" method="post">
                     <h2>Recupera tu contraseña</h2>            
                     <label for="email">Ingresa tu email
-                    <input class="campos" type="email" id="email"  name="email" placeholder="example@gmail.com" required>
+                    <input class="campos" type="email" id="email"  name="email" placeholder="example@gmail.com">
                     </label>
+                    <p class="emailRecuperarErr"></p>
                     <label for="checkbox">Quiero recuperar mi contraseña
-                    <input type="checkbox" id="checkbox"  value="recuperar" required>
+                    <input type="checkbox" id="checkbox"  value="recuperar">
                     </label>
+                    <p class="checkBoxRecuperarErr"></p>
                     <button type="submit" value="Recuperar">Recuperar</button>
+                    <p class="respuestaFinal"></p>
+                    <a class="linkLogin" href="./login.html">Ir al login</a>
                 </form>    
             </div>        
         </div>
@@ -48,5 +52,6 @@
               <p>Agustín Jaralambides y Marco Mambretti</p>
         </div>        
     </footer>
+    <script src="./js/recover.js"></script>
 </body>
 </html>
