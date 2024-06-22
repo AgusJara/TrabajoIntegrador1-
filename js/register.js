@@ -8,18 +8,12 @@ let emailErr = document.querySelector ('.emailErr');
 let passErr = document.querySelector ('.passErr');
 let passConfErr = document.querySelector('.passConfErr');
 let errCheck = document.querySelector ('.errCheck');
-let usuario= {};
-let usuarios=[];
+
 
 
 form.addEventListener ('submit', function(e){
     e.preventDefault();
     if (email.value !== '' && pass.value !== '' && pass.value.length > 7 && passConfirm.value == pass.value && idCheck.checked) {
-        usuario.email = email.value;
-        usuario.pass = pass.value;
-        usuarios.push (usuario);
-        // console.log(usuarios);
-        localStorage.setItem ("usuario", JSON.stringify(usuarios));
         this.submit();
     }
 })
