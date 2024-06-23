@@ -455,6 +455,33 @@ form h2{
 
     /* CARRITO */
 
+    .finalizar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        height: 30px;
+        border-radius: 15px;
+        background-color:rgb(89, 134, 198);
+    
+}
+
+
+    .productocart{
+        display: flex;
+        gap: 15px;
+        border: 10px;
+        width: 100%;
+    }
+
+    .container_producto{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: left;
+
+    }
+
     .container_cart{
         height: 80vh;
         display: flex;
