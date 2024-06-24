@@ -11,40 +11,28 @@ let usuarios=[];
 
 
 form.addEventListener ('submit', function(e){
-    e.preventDefault();
-    if (email.value !== '' && pass.value !== '' && pass.value.length > 7 && passConfirm.value == pass.value && idCheck.checked) {
+    if (email.value !== '' && pass.value !== '' && pass.value.length >= 6) {
         usuario.email = email.value;
         usuario.pass = pass.value;
-        usuarios.push (usuario);
+        // usuarios.push (usuario);
         // console.log(usuarios);
-        localStorage.setItem ("usuario", JSON.stringify(usuarios));
-        this.submit();
+        localStorage.setItem("usuarioLoggedIn", JSON.stringify(usuario));
+    } else {
+        e.preventDefault();
+        if(email.value == '' && pass.value == ''){
+            alert('Ingrese los datos');
+        } else if(email.value == ''){
+            alert('Por favor complete el campo email');
+        }
+         else if(pass.value == '') {
+            alert('Por favor complete el campo contraseña')
+        } else if(pass.value.length >=6 ){
+            alert('La contraseña debe tener al menos 6 caracteres')
+        }
     }
 })
 
 
-document.addEventListener ('DOMContentLoaded', function () {
-    let pass = document.querySelector('#password');
-    let passErr = document.querySelector ('.passErr');
-    
-    pass.addEventListener ('input', function() {
-        if (pass.value == ''){
-            passErr.innerText ='Por favor complete el campo';
-        } else if (pass.value.length <= 6){
-            passErr.innerText ='Debe ingresar al menos 6 caracteres';
-        } else {
-            passErr.innerText = '';
-        }
-    })
-    
-    email.addEventListener('input', function(){
-        if (email.value =='') {
-           emailErr.innerText = 'Por favor complete el campo';
-        } else{
-            emailErr.innerText = '';
-        }
-    })
-    
-    })
+
 
     
