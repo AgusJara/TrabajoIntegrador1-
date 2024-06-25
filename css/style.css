@@ -22,7 +22,18 @@ body{
 
 .aheader{
     display: flex;
+    flex-direction: column;
     gap: 1em;
+    width: 5%;
+}
+
+.aheader p{
+    font-style: italic;
+}
+
+.aheader a{
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 a{
@@ -725,6 +736,29 @@ form h2{
     }
 
     .subcontainerCategory div h4{
+        width: 100%;
+    }
+
+    .aheader{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 20%;
+    }
+
+    .aheader p{
+        word-wrap: break-word;
+        width: fit-content;
+        font-size: small;
+        font-style: italic;
+    }
+
+    .aheader a{
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .finalizar{
         width: 100%;
     }
 }

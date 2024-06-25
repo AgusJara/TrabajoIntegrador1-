@@ -14,7 +14,7 @@ form.addEventListener ('submit', function(e){
     if (email.value !== '' && pass.value !== '' && pass.value.length >= 6) {
         usuario.email = email.value;
         usuario.pass = pass.value;
-        // usuarios.push (usuario);
+        usuarios.push (usuario);
         // console.log(usuarios);
         localStorage.setItem("usuarioLoggedIn", JSON.stringify(usuario));
     } else {
